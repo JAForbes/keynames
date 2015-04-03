@@ -2,14 +2,15 @@
 A function that returns an array of names of a keyboard key.
 
 
-Quick Start
------------
+####Quick Start
 
 ```js
 window.onkeydown = function(e){
   keynames.get(e) //=> [190, ".", "DOT", "PERIOD"]
 }
 ```
+
+---
 
 ###Keymap
 
