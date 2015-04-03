@@ -22,9 +22,9 @@ window.onkeydown = function(e){
 - `symbolAliases`: Other names that describe symbols.  Like SEMICOLON or DOLLAR
 
 
-###Single of Multiple Aliases per symbol
+####Single or Multiple Aliases per symbol
 
-All of these properties can map to a single string or an array of strings.  For example:
+All of the keymap properties can map to a single string or an array of strings.  For example:
 
 ```js
 //There are three symbol aliases for the symbol *
@@ -44,9 +44,12 @@ keynames.get({keyCode: 49, shiftKey: true }) //=> [49, "!", "EXCLAMATION"]
 
 ```
 
-You can edit or even override the keymap.  
+####Editing the keymap
 
-But if you want to customize the `keymap` without mutating it permanently. 
+Different regions of the world have different keymappings.  And different applications have different needs when describing
+the keycodes.  
+
+You can always directly edit the default keymap.  But if you want to customize the `keymap` without mutating it permanently. 
 Access the mapping function `keynames.names` directly and pass in your own key map.
 
 ```js
