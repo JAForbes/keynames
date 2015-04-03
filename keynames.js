@@ -55,12 +55,12 @@ keynames = {
 		var alphanumeric = (isAlphaKey || isNumberKey && !e.shiftKey) && String.fromCharCode(e.keyCode)
 
 		// Different symbols are accesible depending on the shift key
-		var symbol = (e.shiftKey ? keymap.shiftSymbols : keymap.symbols )[code]
+		var symbol = ((e.shiftKey ? keymap.shiftSymbols : keymap.symbols ) || {})[code]
 
-		symbolAlias = (keymap.symbolAliases)[symbol]
+		symbolAlias = (keymap.symbolAliases || {})[symbol]
 
 		// Special keys that are not affected by SHIFT like ESC or SPACE
-		var special = (keymap.specials)[code]
+		var special = (keymap.specials || {})[code]
 
 		// Create a flat array of shortcuts to check
 		return [].concat(
@@ -76,3 +76,4 @@ keynames = {
 	}
 }
 keynames.get = keynames.names.bind(0,keynames.keymap)
+
