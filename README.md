@@ -22,6 +22,8 @@ window.onkeydown = function(e){
 - `symbolAliases`: Other names that describe symbols.  Like SEMICOLON or DOLLAR
 
 
+###Single of Multiple Aliases per symbol
+
 All of these properties can map to a single string or an array of strings.  For example:
 
 ```js
