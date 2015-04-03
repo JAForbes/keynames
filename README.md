@@ -10,8 +10,6 @@ window.onkeydown = function(e){
 }
 ```
 
----
-
 ###Keymap
 
 
@@ -51,7 +49,7 @@ Different regions of the world have different keymappings.  And different applic
 the keycodes.  
 
 You can always directly edit the default keymap.  But if you want to customize the `keymap` without mutating it permanently. 
-Access the mapping function `keynames.names` directly and pass in your own key map.
+Access the `keynames.names` function directly and pass in your own key map.
 
 ```js
 
