@@ -1,8 +1,8 @@
 # keynames
-A function that returns an array of names of a keyboard key.
+A customizable function that returns an array of names of a keyboard key.
 
 
-####Quick Start
+####Basic Usage
 
 ```js
 window.onkeydown = function(e){
@@ -10,7 +10,9 @@ window.onkeydown = function(e){
 }
 ```
 
-###Keymap
+###Advanced Usage
+
+####Keymap
 
 
 `keynames.keymap` has four properties
