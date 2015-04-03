@@ -11,18 +11,16 @@ window.onkeydown = function(e){
 }
 ```
 
-Keymap
-======
+###Keymap
+
 
 `keynames.keymap` has four properties
 
-- `specials`
-- `symbols`
-- `shiftSymbols`
-- `symbolAliases`
+- `specials` : Non alphanumeric keys that aren't affected by shift.  Like ESC or TAB
+- `symbols` : Non alphanumeric keys that are active when the shift key is not active. Like ; or `
+- `shiftSymbols`: Non alphanumeric keys that are active when the shift key is active. Like ! or $
+- `symbolAliases`: Other names that describe symbols.  Like SEMICOLON or DOLLAR
 
-`specials`, `symbols` and `shiftSymbols` map keyCodes to string descriptions of that key.
-`symbolAliases` maps the string description from `symbols` into an a string that describe the symbol.
 
 All of these properties can map to a single string or an array of strings.  For example:
 
@@ -33,6 +31,9 @@ keynames.keymap.symbolAliases['*'] //=> ['STAR', 'MULTIPLY', 'TIMES']
 //keynames.get will return the original keyCode, the symbol and the symbol aliases
 keynames.get({keyCode: 56, shiftKey: true }) //=> [56, "*", "STAR", "MULTIPLY", "TIMES"]
 
+```
+
+```js
 //There is only one symbol alias for the symbol '!'
 keynames.keymap.symbolAliases['!'] 
 
@@ -41,7 +42,10 @@ keynames.get({keyCode: 49, shiftKey: true }) //=> [49, "!", "EXCLAMATION"]
 
 ```
 
-You can edit or even override the keymap.  If you want to customize the `keymap` without mutating it permanently, you can access the mapping function directly and pass in your own key map.
+You can edit or even override the keymap.  
+
+But if you want to customize the `keymap` without mutating it permanently. 
+Access the mapping function `keynames.names` directly and pass in your own key map.
 
 ```js
 
@@ -64,7 +68,7 @@ This is perfectly safe:
 ```js
 var event = {keyCode: 50, shiftKey: true}
 
- // <-- Provide an empty keymap
+ // Provide an empty keymap
 keynames.names({}, event) //=> [50] // Only get back the keyCode
 
 ```
