@@ -69,7 +69,7 @@ keynames.get(event) //=> [50, '@', 'AT']
 ```
 If a property is missing from keymap it will just be ignored.
 
-This is perfectly safe:
+It is perfectly safe to provide an empty keymap.  You'll just get no names back other than the original keycode.
 
 ```js
 var event = {keyCode: 50, shiftKey: true}
