@@ -1,5 +1,5 @@
 keynames = {
-  keymap: {
+	keymap: {
 		specials: {
 			9: 'TAB',
 			13: 'ENTER',
