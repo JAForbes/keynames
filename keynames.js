@@ -76,6 +76,9 @@ var keynames = {
 	}
 }
 keynames.get = keynames.names.bind(0,keynames.keymap)
+keynames.is = function(name, event){
+	return keynames.get(event).indexOf(name) > -1
+}
 
 if( typeof module !== "undefined" ){
   module.exports = keynames
