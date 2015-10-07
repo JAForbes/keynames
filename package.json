@@ -1,10 +1,5 @@
 {
   "name": "keynames",
-  "description": "A customizable function that returns an array of names of a keyboard key.",
-  "main": "keynames.js"
-}
-{
-  "name": "keynames",
   "version": "0.0.0",
   "description": "A customizable function that returns an array of names of a keyboard key.",
   "main": "keynames.js",
