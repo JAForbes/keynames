@@ -57,7 +57,7 @@ var keynames = {
 		// Different symbols are accesible depending on the shift key
 		var symbol = ((e.shiftKey ? keymap.shiftSymbols : keymap.symbols ) || {})[code]
 
-		symbolAlias = (keymap.symbolAliases || {})[symbol]
+		var symbolAlias = (keymap.symbolAliases || {})[symbol]
 
 		// Special keys that are not affected by SHIFT like ESC or SPACE
 		var special = (keymap.specials || {})[code]
