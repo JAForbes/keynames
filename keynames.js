@@ -1,4 +1,4 @@
-keynames = {
+var keynames = {
 	keymap: {
 		specials: {
 			9: 'TAB',
@@ -77,3 +77,6 @@ keynames = {
 }
 keynames.get = keynames.names.bind(0,keynames.keymap)
 
+if( typeof module !== "undefined" ){
+  module.exports = keynames
+}
